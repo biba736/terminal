@@ -28,7 +28,6 @@ namespace te {
 		std::cout << "New content:\n";
 
 		std::string NewContent;
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::getline(std::cin, NewContent);
 		setContent(NewContent);
 		return this; //Тип не изменился

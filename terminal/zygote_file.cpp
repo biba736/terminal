@@ -25,10 +25,11 @@ namespace te {
 				return this;
 			}
 			else {
-				delete this;
 				return new SingleLineFile(entry_name, text);
 			}
 		}
+
+		
 
 		else if (text_type == "m") {
 			std::vector <std::string> lines;
@@ -41,8 +42,6 @@ namespace te {
 			if (lines.empty()) {
 				return this;
 			}
-
-			delete this;
 
 			MultiLineFile* newFile = new MultiLineFile(entry_name);
 			for (const auto& l : lines) {
